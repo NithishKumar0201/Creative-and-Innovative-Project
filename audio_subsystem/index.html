@@ -1,0 +1,31 @@
+<html>
+  <head>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div class="container p-3 my-3 bg-dark text-white">
+        <div class="row">
+            <div class="col" style="text-align:center">
+                <button id="left" onmousedown="collect(0)" onmouseup="collect(null)">Class 0</button>
+                <button id="right" onmousedown="collect(1)" onmouseup="collect(null)">Class 1</button>
+                <!--button id="noise" onmousedown="collect(2)" onmouseup="collect(null)">Noise</button-->
+            </div>
+            <div class="col" style="text-align:center">
+            <button id="train" onclick="train()">Train</button>
+            <div id="console"></div>
+        </div>
+        <div class="col" style="text-align:center">
+            <button id="listen" onclick="listen()">Listen</button>
+            <input type="range" id="output" min="0" max="10" step="0.1">
+        </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
